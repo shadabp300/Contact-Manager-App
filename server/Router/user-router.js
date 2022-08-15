@@ -25,32 +25,6 @@ router.get('/',(req , res)=>{
     }
 })
 
-// router.post('/add', async (req, res) => {
-//     try {
-//         const auth_id = jwt.verify(req.headers.authorization, process.env.SECRET_KEY);
-//         userInfo.find({ userId: auth_id}).then((userData) => {
-//             if (userData.length) {
-//                 userInfo.updateMany({ userId: auth_id }, { $set: { contact: req.body } }).then(() => {
-//                     console.log('Done 2')
-//                     res.status(200).send('/')
-//                 }).catch((err) => {
-//                     res.status(500).send(err)
-//                 })
-//             }else{
-                
-//                 userInfo.create({userId: auth_id,contact:req.body}).then(()=>{
-//                     console.log('Done 1')
-//                     res.status(200).send('Done')
-//                 }).catch((err)=>{
-//                     res.send(500).send(err)
-//                 })
-//             }
-//         })
-
-//     } catch(err) {
-//         res.status(500).send('err')
-//     }
-// })
 
 router.post("/delete", async (req , res)=>{
     console.log(req.headers.authorization)
